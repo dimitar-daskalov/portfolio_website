@@ -46,7 +46,7 @@ const Home = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="w-80 h-[26rem] fixed hidden lg:flex lg:bottom-0 lg:right-[8%] z-[100]"
+        className="w-80 h-[26rem] fixed hidden lg:flex lg:bottom-0 lg:right-[8%] z-[50]"
       >
         <Avatar />
       </motion.div>
