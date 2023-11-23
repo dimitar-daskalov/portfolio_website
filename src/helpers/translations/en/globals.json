@@ -1,0 +1,92 @@
+{
+  "home": {
+    "header-first-part": "Hi there!",
+    "header-second-part": " I am <span class=\"text-primary\">Dimitar.</span>",
+    "body": "Enthusiastic <span class=\"text-primary\">Front End Developer</span> with hands-on experience in crafting engaging and user-friendly web interfaces, currently based in Sofia. Driven by a curiosity for emerging technologies, I am constantly exploring innovative solutions to enhance web applications.<br><br>Let's connect and explore how my skills can contribute to your next exciting project!",
+    "first-button": "Work",
+    "second-button": "Contact"
+  },
+  "about": {
+    "header": "About <span class=\"text-primary\"> me</span>",
+    "body": "Back in 2020, while immersed in my daily tasks and staring in an Excel document at my previos job, a moment of curiosity changed the trajectory of my career. A colleague of mine was diligently crafting a script to automate some of our workflow. Intrigued, I asked if I could take a look and I was immediately hooked. This sparked a turning point, and in 2021, I embarked on a journey at the software university. And after some time, I was able to land my first software engineering job. Fast-forwarding to the present, over two years have elapsed, and my primary focus revolves around crafting engaging front-end applications.<br /><br />When I’m not at the computer, I’m usually watching movies, with my soon-to-be wife, or strolling through the scenic city parks of Sofia.",
+    "experience": "Years of experience:",
+    "technologies": "Technologies:"
+  },
+  "work": {
+    "header": "Where I've <span class=\"text-primary\"> worked</span>",
+    "projects": {
+      "header": "Projects",
+      "todo": {
+        "name": "Todo Application",
+        "description": "Todo application with React."
+      }
+    },
+    "stepper": {
+      "current-position": {
+        "sub-title": "Mar 2023 - Present",
+        "description": "I am currently working as a Front End software developer for a social media platform project. My responsibilities include utilizing technologies such as React, TypeScript, React Query, React Testing Library, Chakra UI, and Jest to develop the user interface and ensure a user-friendly design and optimal functionality. The project follows Agile methods and employs tools like Jira and Confluence."
+      },
+      "previous-position": {
+        "sub-title": "Apr 2022 - Mar 2023",
+        "description": "I worked for an american client e-commerce platform project. Encompassing Front End technologies including React, JavaScript, TypeScript, React Query, React Testing Library, and Jest. As well as Back End technologies such as Python, Django REST Framework, and Unit Testing."
+      },
+      "trainee": {
+        "sub-title": "Feb 2022 - Mar 2022",
+        "description": "Completed"
+      }
+    },
+    "buttons": {
+      "demo": "Demo",
+      "download-CV": {
+        "download": "Resume",
+        "downloading": "Downloading..."
+      }
+    },
+    "toast": {
+      "success": "Download successful!",
+      "error": "Download failed!"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "work": "work",
+    "contact": "Contact"
+  },
+  "language-switcher": {
+    "tooltip": "Switch Language"
+  },
+  "contact-form": {
+    "name-errors": {
+      "short": "Name is too short!",
+      "long": "Name is too long!",
+      "required": "Name is required!"
+    },
+    "email-errors": {
+      "invalid": "Invalid email!",
+      "required": "Email is required!"
+    },
+    "subject-errors": {
+      "short": "Subject is too short!",
+      "long": "Subject is too long!",
+      "required": "Subject is required!"
+    },
+    "message-errors": {
+      "short": "Message is too short!",
+      "long": "Message is too long!",
+      "required": "Message is required!"
+    },
+    "toast": {
+      "success": "Thank you for reaching out! I will contact you soon!",
+      "error": "Submission failed!"
+    },
+    "header": "Contact <span class=\"text-primary\">me</span>",
+    "button": "Send <span class=\"text-primary\">email</span>",
+    "input-placeholder": {
+      "name": "name",
+      "email": "email",
+      "subject": "subject"
+    },
+    "text-area-placeholder": "Write your thoughts..."
+  }
+}
