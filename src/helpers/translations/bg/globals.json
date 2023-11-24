@@ -2,7 +2,7 @@
   "home": {
     "header-first-part": "Привет!",
     "header-second-part": " Аз съм <span class=\"text-primary\">Димитър.</span>",
-    "body": "Ентусиазиран <span class=\"text-primary\">Front End Developer</span> с практически опит в създаването на хващащи окото и интуитивни за потребителя уеб интерфейси, в момента базиран в София. Движен от любопитството си към нови технологии, постоянно търся иновативни решения за подобряване на уеб приложенията.<br><br>Да се свържем и да видим как моите умения могат да допринесат за вашият вълнуващ проект!",
+    "body": "Ентусиазиран <span class=\"text-primary\">Front End Developer</span> с практически опит в създаването на хващащи окото и интуитивни за потребителя уеб интерфейси, в момента базиран в София. Движен от любопитството си към нови технологии, постоянно търся иновативни решения за подобряване на уеб приложенията.<br><br>Да се свържем и да видим как моите умения могат да допринесат за вашия вълнуващ проект!",
     "first-button": "Работа",
     "second-button": "Контакти"
   },
@@ -28,7 +28,7 @@
       },
       "previous-position": {
         "sub-title": "Апр 2022 - Мар 2023",
-        "description": "Работих по проект за електронна търговия за американски клиент на позиция Junior Full Stack developer. За Front End разработката използвах технологии като React, JavaScript, TypeScript, React Query, React Testing Library и Jest. А за Back End, Python, Django REST Framework и pytest."
+        "description": "Работих по проект за електронна търговия за американски клиент на позиция Junior Full Stack developer. За Front End разработката използвах технологии като React, JavaScript, TypeScript, React Query, React Testing Library и Jest. А за Back End - Python, Django REST Framework и pytest."
       },
       "trainee": {
         "sub-title": "Фев 2022 - Мар 2022",
