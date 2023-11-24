@@ -10,7 +10,7 @@ const Navigation = () => {
   const [t] = useTranslation("global");
 
   return (
-    <nav className="fixed flex flex-col items-center xl:justify-center gap-y-4 h-max bottom-0 mt-auto xl:right-[1%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">
+    <nav className="fixed flex flex-col items-center xl:justify-center gap-y-4 bottom-0 xl:mt-auto xl:right-[1%] z-50 w-full xl:w-16 xl:max-w-md xl:h-screen">
       <LanguageSwitcher />
       <SwitchThemeToggle />
       <Socials />

@@ -14,12 +14,6 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1280px) {
-  body {
-    scroll-padding-bottom: 96px;
-  }
-}
-
 @layer base {
   :root {
     --color-primary: 133 137 139;
