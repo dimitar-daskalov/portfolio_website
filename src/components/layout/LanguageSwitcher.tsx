@@ -13,7 +13,7 @@ const LanguageSwitcher = () => {
         localStorage.setItem("language", newLanguage);
       }}
     >
-      <div className="absolute pr-9 right-3 hidden group-hover:flex">
+      <div className="absolute pr-9 right-3 hidden group-hover:md:flex">
         <div className="bg-primary relative flex items-center p-3 rounded-lg">
           <div className="text-sm text-secondary leading-none font-semibold ">
             {t("language-switcher.tooltip")}
