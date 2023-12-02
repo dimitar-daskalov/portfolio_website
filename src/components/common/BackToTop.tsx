@@ -1,24 +1,8 @@
-import { useEffect, useState } from "react";
 import { HiArrowUp } from "react-icons/hi";
+import useShowElement from "../hooks/useShowElement";
 
 const BackToTop = () => {
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    if (scrollY > 100) {
-      setShowButton(true);
-    } else {
-      setShowButton(false);
-    }
-  };
+  const { showElement: showButton } = useShowElement(100);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });

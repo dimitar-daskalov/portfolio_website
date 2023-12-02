@@ -4,7 +4,10 @@ import { ROUTES } from "../../helpers/constants";
 
 const Logo = () => {
   return (
-    <Link className="fixed top-[-1.875rem] left-[-2.5] z-50" to={ROUTES.home}>
+    <Link
+      className="fixed top-[-1.875rem] left-[-2.5] z-[100]"
+      to={ROUTES.home}
+    >
       <img
         src={fullLogoImage}
         alt="Full Logo"

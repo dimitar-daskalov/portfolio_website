@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import IconsSpinner from "./IconsSpinner";
 import BackToTop from "../common/BackToTop";
 import Footer from "./Footer";
+import Header from "./Header";
 
 export const RootLayout = () => (
   <>
@@ -13,6 +14,7 @@ export const RootLayout = () => (
     </div>
     <Logo />
     <IconsSpinner />
+    <Header />
     <div className="h-full my-[7.75rem] xl:my-[3.75rem] max-width-[1280px] flex items-center justify-center z-1 mx-4">
       <Outlet />
     </div>
