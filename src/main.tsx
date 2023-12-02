@@ -15,7 +15,7 @@ ReactGA.initialize(gaKey);
 ReactGA.send({
   hitType: "pageview",
   page: window.location.pathname,
-  title: `Visited ${window.location.pathname}`,
+  title: "Website visit.",
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

@@ -6,6 +6,7 @@ import resumeSrc from "../../assets/Resume.pdf";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
 import useCommonToast from "../hooks/useCommonToast";
+import ReactGA from "react-ga4";
 
 const DownloadButton = () => {
   const [t] = useTranslation("global");
@@ -37,9 +38,17 @@ const DownloadButton = () => {
 
       link?.parentNode?.removeChild(link);
       successToast(t("work.toast.success"));
+      ReactGA.event({
+        action: "Resume downloaded successfully.",
+        category: "Download Resume",
+      });
     } catch (e) {
       console.error(e);
       errorToast(t("work.toast.error"));
+      ReactGA.event({
+        action: "Resume downloading failed.",
+        category: "Download Resume",
+      });
     } finally {
       setIsDownloading(false);
     }

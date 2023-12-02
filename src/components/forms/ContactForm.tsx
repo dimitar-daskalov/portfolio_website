@@ -11,6 +11,7 @@ import axiosInstance from "../providers/axios";
 import InputFormField from "./InputFormField";
 import TextAreaFormField from "./TextAreaFormField";
 import { useTranslation } from "react-i18next";
+import ReactGA from "react-ga4";
 
 export interface FormValues {
   [key: string]: string;
@@ -62,9 +63,17 @@ const ContactForm = () => {
       await axiosInstance.post(formKey, values);
       formikHelpers.resetForm();
       successToast(t("contact-form.toast.success"));
+      ReactGA.event({
+        action: "Contact form sent successfully.",
+        category: "Contact Form",
+      });
     } catch (error) {
       console.error(error);
       errorToast(t("contact-form.toast.error"));
+      ReactGA.event({
+        action: "Contact form sending failed.",
+        category: "Contact Form",
+      });
     }
   };
 
