@@ -2,7 +2,7 @@ import FancyButton from "./FancyButton";
 import { useTranslation } from "react-i18next";
 import { HiArrowUpRight } from "react-icons/hi2";
 
-interface TestCardProps {
+interface Card {
   name: string;
   description: string;
   image: string;
@@ -10,13 +10,7 @@ interface TestCardProps {
   appGitHub: string;
 }
 
-const Card = ({
-  name,
-  description,
-  image,
-  appDemo,
-  appGitHub,
-}: TestCardProps) => {
+const Card = ({ name, description, image, appDemo, appGitHub }: Card) => {
   const [t] = useTranslation("global");
 
   return (
