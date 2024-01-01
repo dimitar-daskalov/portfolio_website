@@ -10,7 +10,7 @@ const Logo = () => {
     >
       <img
         src={fullLogoImage}
-        alt="Full Logo"
+        alt="full logo"
         className="w-[9.375rem] h-[9.375rem] cursor-pointer"
       />
     </Link>

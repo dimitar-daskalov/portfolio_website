@@ -1,111 +1,58 @@
-import React from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import FancyButton from "./FancyButton";
 import { useTranslation } from "react-i18next";
+import { HiArrowUpRight } from "react-icons/hi2";
 
-interface CardProps {
+interface TestCardProps {
   name: string;
   description: string;
+  image: string;
   appDemo: string;
   appGitHub: string;
 }
 
-const Card = ({ name, description, appDemo, appGitHub }: CardProps) => {
+const Card = ({
+  name,
+  description,
+  image,
+  appDemo,
+  appGitHub,
+}: TestCardProps) => {
   const [t] = useTranslation("global");
 
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const mouseXSpring = useSpring(x);
-  const mouseYSpring = useSpring(y);
-
-  const rotateX = useTransform(
-    mouseYSpring,
-    [-0.5, 0.5],
-    ["17.5deg", "-17.5deg"]
-  );
-  const rotateY = useTransform(
-    mouseXSpring,
-    [-0.5, 0.5],
-    ["-17.5deg", "17.5deg"]
-  );
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const rect = (e.target as HTMLElement).getBoundingClientRect();
-
-    const width = rect.width;
-    const height = rect.height;
-
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
-
-    x.set(xPct);
-    y.set(yPct);
-  };
-
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
-
   return (
-    <motion.div
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        rotateY,
-        rotateX,
-        transformStyle: "preserve-3d",
-      }}
-      className="relative h-96 w-72 rounded-3xl bg-gradient-to-br from-accent-2/10 to-primary/80 m-2"
-    >
-      <div
-        style={{
-          transform: "translateZ(75px)",
-          transformStyle: "preserve-3d",
-        }}
-        className="absolute inset-4 grid place-content-center rounded-3xl bg-primary px-2 py-4 gap-8"
-      >
-        <h1
-          style={{
-            transform: "translateZ(75px)",
-          }}
-          className="mx-auto text-2xl text-secondary font-bold text-center"
-        >
-          {name}
-        </h1>
-        <p
-          style={{
-            transform: "translateZ(50px)",
-          }}
-          className="text-center text-xl text-accent-2"
-        >
-          {description}
-        </p>
-        <div
-          style={{
-            transform: "translateZ(25px)",
-          }}
-          className="flex flex-wrap justify-between gap-2"
-        >
-          <FancyButton
-            inputText={t("work.buttons.demo")}
-            route={appDemo}
-            isExternal
-            isSmall
+    <div className="relative h-96 w-72 overflow-hidden rounded-3xl shadow-lg group">
+      <img
+        src={image}
+        alt="card image"
+        className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-200"
+      />
+      <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/100 to-transparent">
+        <div className="flex flex-col h-full w-full justify-between p-4">
+          <div className="flex flex-col h-full text-white justify-between p-4">
+            <h1 className="mx-auto text-2xl font-bold text-center">{name}</h1>
+            <p className="text-xl text-center">{description}</p>
+          </div>
+          <HiArrowUpRight
+            size={50}
+            className="text-white m-2 group-hover:rotate-45 duration-200"
           />
-          <FancyButton
-            inputText="GitHub"
-            route={appGitHub}
-            isExternal
-            isSmall
-          />
+          <div className="flex flex-wrap justify-between gap-2">
+            <FancyButton
+              inputText={t("work.buttons.demo")}
+              route={appDemo}
+              isExternal
+              isCardButton
+            />
+            <FancyButton
+              inputText="GitHub"
+              route={appGitHub}
+              isExternal
+              isCardButton
+            />
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

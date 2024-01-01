@@ -7,7 +7,7 @@ interface FancyButtonProps {
   inputText: string;
   route: string;
   isExternal?: boolean;
-  isSmall?: boolean;
+  isCardButton?: boolean;
 }
 
 const CYCLES_PER_LETTER = 2;
@@ -19,7 +19,7 @@ const FancyButton = ({
   inputText,
   route,
   isExternal = false,
-  isSmall = false,
+  isCardButton = false,
 }: FancyButtonProps) => {
   const intervalRef = useRef<number | null>(null);
   const [text, setText] = useState(inputText);
@@ -73,20 +73,20 @@ const FancyButton = ({
         onMouseEnter={scramble}
         onMouseLeave={stopScramble}
         className={`group relative overflow-hidden h-[4rem]  ${
-          isSmall
-            ? "w-[5rem] p-2 bg-gradient-to-br from-technologies-tailwindcss/100 to-technologies-chakraui rounded-2xl"
-            : "w-[11rem] p-4 bg-accent-2/10 backdrop-blur-sm rounded-3xl"
-        } m-4 uppercase text-primary transition-colors hover:text-accent-1`}
+          isCardButton
+            ? "w-[5rem] p-2 bg-gradient-to-br from-technologies-tailwindcss/100 to-technologies-chakraui rounded-2xl text-secondary"
+            : "w-[11rem] p-4 bg-accent-2/10 backdrop-blur-sm rounded-3xl text-primary"
+        } m-4 uppercase transition-colors hover:text-accent-1`}
       >
         <div
           className={`flex items-center ${
-            isSmall ? "justify-center" : "justify-between"
+            isCardButton ? "justify-center" : "justify-between"
           } z-10`}
         >
           <span>{text}</span>
           <div
             className={`${
-              isSmall ? "hidden" : "flex"
+              isCardButton ? "hidden" : "flex"
             } text-4xl group-hover:translate-x-2 transition-all duration-300 text-primary group-hover:text-accent-1`}
           >
             <HiArrowRight />

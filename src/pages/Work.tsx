@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import Card from "../components/common/Card";
 import useCardsData from "../components/hooks/useCardsData";
 import { fadeIn } from "../helpers/customAnimations";
 import DownloadButton from "../components/common/DownloadButton";
 import { useTranslation } from "react-i18next";
 import Stepper from "../components/common/Stepper";
+import Card from "../components/common/Card";
 
 const Work = () => {
   const [t] = useTranslation("global");
@@ -47,6 +47,7 @@ const Work = () => {
             description={card.description}
             appDemo={card.appDemo}
             appGitHub={card.appGitHub}
+            image={card.image}
           />
         ))}
       </div>

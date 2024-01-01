@@ -25,7 +25,7 @@ const ErrorBoundary = () => {
         <div className="text-center">
           <img
             src={notFoundSvg}
-            alt="Not Found"
+            alt="not found"
             className="w-[25rem] h-[25rem] bg-primary rounded-3xl"
           />
           <p className="mt-4 text-primary text-xl">
