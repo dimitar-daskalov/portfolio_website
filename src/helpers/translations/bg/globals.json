@@ -19,6 +19,10 @@
       "todo": {
         "name": "Апликация за задачи",
         "description": "Апликация за задачи с React."
+      },
+      "spotify-clone": {
+        "name": "Slothify",
+        "description": "Елегантна апликация за музика с React."
       }
     },
     "stepper": {

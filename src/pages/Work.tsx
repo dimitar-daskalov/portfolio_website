@@ -36,21 +36,19 @@ const Work = () => {
         <Stepper />
         <DownloadButton />
       </motion.div>
-      <div className="hidden">
-        <h2 className="text-2xl mt-2 text-accent-2 text-center">
-          {t("work.projects.header")}
-        </h2>
-        <div className="flex flex-wrap justify-evenly items-center gap-8 mt-2">
-          {cardsData.map((card, index) => (
-            <Card
-              key={index}
-              name={card.name}
-              description={card.description}
-              appDemo={card.appDemo}
-              appGitHub={card.appGitHub}
-            />
-          ))}
-        </div>
+      <h2 className="text-2xl mt-2 text-accent-2 text-center">
+        {t("work.projects.header")}
+      </h2>
+      <div className="flex flex-wrap justify-evenly items-center gap-8 mt-2">
+        {cardsData.map((card, index) => (
+          <Card
+            key={index}
+            name={card.name}
+            description={card.description}
+            appDemo={card.appDemo}
+            appGitHub={card.appGitHub}
+          />
+        ))}
       </div>
     </div>
   );

@@ -5,10 +5,16 @@ const useCardsData = () => {
 
   const cardsData = [
     {
+      name: t("work.projects.spotify-clone.name"),
+      description: t("work.projects.spotify-clone.description"),
+      appDemo: "https://slothify.netlify.app/",
+      appGitHub: "https://github.com/dimitar-daskalov/spotify-clone/",
+    },
+    {
       name: t("work.projects.todo.name"),
       description: t("work.projects.todo.description"),
-      appDemo: "https://lively-sable-3ee8ec.netlify.app/",
-      appGitHub: "https://github.com/dimitar-daskalov/todo-app-vite",
+      appDemo: "https://react-checklist-app.netlify.app/",
+      appGitHub: "https://github.com/dimitar-daskalov/todo-app-vite/",
     },
   ];
 
